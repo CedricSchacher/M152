@@ -1,0 +1,26 @@
+h1{
+    font-size: 30px;
+    color: #B90606;
+}
+h2{
+    font-size: 22px;
+    color: #907011;
+    font-weight: bold;
+}
+h3{
+    font-size: 20px;
+    color: #901111
+}
+h4{
+    font-size: 18px;
+    color: #901111;
+}
+h5{
+    font-size: 18px;
+    color: #B90606;
+}
+button{
+    font-weight: bold;
+    color: white;
+    background-color: #907011;
+}
