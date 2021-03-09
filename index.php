@@ -16,7 +16,7 @@
     }
 ?>
 <div id="logo">
-
+    <img src="F1nfos.webp" width="100" loading="lazy">
 </div>
 <h1>Formel 1 News und Infos</h1>
 <div id="artikel">
