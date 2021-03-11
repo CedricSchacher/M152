@@ -10,15 +10,10 @@
 <div id="logo">
 
 </div>
-<h1>Artikeltitel</h1>
-<div id="bild">
+<?php require_once "selectSpecificArtikel.php"; ?>
 
-</div>
-<div id="artikel">
-
-</div>
 <div id="kommentar">
-
+    <?php require_once "selectSpecificComments.php"; ?>
 </div>
 <div id="neuKommentar">
     <input type="text" id="name">

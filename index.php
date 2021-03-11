@@ -19,10 +19,10 @@
     <img src="F1nfos.webp" width="100" loading="lazy">
 </div>
 <h1>Formel 1 News und Infos</h1>
-<div id="artikel">
-
+<div id="artikels">
+    <?php require_once "selectAllArtikel.php"; ?>
 </div>
-<button>Neuer Artikel</button>
+<button><a href="hochladen.php">Neuer Artikel</a></button>
 
 </body>
 </html>

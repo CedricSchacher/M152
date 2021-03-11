@@ -1,5 +1,16 @@
+
+
+.artikel{
+   border:   2px solid cyan;
+    margin: 5px;
+}
+.nameDate{
+    float: right;
+}
+
 #logo{
     margin-top: 0;
+    float: left;
 }
 h1{
     font-size: 30px;
