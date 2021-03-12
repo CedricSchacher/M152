@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 if($result->num_rows>0){
     while ($row = $result->fetch_assoc()) {
         echo "<div class='artikel'>";
-        echo "<H3>" . $row["Titel"]. "</H3><br>Text: " . $row["Text"];
+        echo "<H3>" . $row["title"]. "</H3><br>Text: " . $row["content"];
         echo "</div>";
     }
 }

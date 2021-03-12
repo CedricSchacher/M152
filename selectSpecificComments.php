@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 if($result->num_rows>0){
     while ($row = $result->fetch_assoc()) {
         echo "<div class='artikel'>";
-        echo " " . $row["Text"]. "<br><div class='nameDate'>" . $row["Datum"] ." " .  $row["Name"] .  "</div>";
+        echo " " . $row["content"]. "<br><div class='nameDate'>" . $row["datum"] ." " .  $row["name"] .  "</div>";
         echo "</div>";
     }
 }

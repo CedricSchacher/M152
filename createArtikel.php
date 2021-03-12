@@ -22,6 +22,9 @@ class createArtikel
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
+        else{
+            echo "connection erfolgreich";
+        }
 
         if (!isset($_POST["title"]) || empty($_POST["title"])) {
             echo "You must specify a title.";
@@ -109,9 +112,12 @@ class createArtikel
 
 
         //ALL BUT THIS WORKS GRRRRRRR :(
-        $result = $conn->query("INSERT INTO artikel(title, content, picture, thumbnail, copyright) VALUES($title, $text, $destinationFilePath, $thumbnailPath, $license)");
+        $result = $conn->query("INSERT INTO 'artikel'(title, content, picture, thumbnail, copyright) VALUES($title, $text, $destinationFilePath, $thumbnailPath, $license)");
         if ($result) {
             echo "Bild erfolgreich hochgeladen";
+        }
+        else{
+            echo "something wrong";
         }
 
     }
