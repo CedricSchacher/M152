@@ -8,7 +8,9 @@
 </head>
 <body>
 <div id="logo">
-
+    <picture>
+    <img src="F1nfos.webp" width="100" loading="lazy">
+    </picture>
 </div>
 <?php require_once "selectSpecificArtikel.php"; ?>
 

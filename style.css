@@ -1,8 +1,10 @@
 
+#title{
 
+}
 .artikel{
-   border:   2px solid cyan;
-    margin: 5px;
+    border: 2px solid black;
+    margin-bottom: 5px;
 }
 .nameDate{
     float: right;
@@ -15,6 +17,7 @@
 h1{
     font-size: 30px;
     color: #B90606;
+    text-align: center;
 }
 h2{
     font-size: 22px;
@@ -37,4 +40,15 @@ button{
     font-weight: bold;
     color: white;
     background-color: #907011;
+
+}
+button a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#bottom{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
 }

@@ -66,12 +66,12 @@ class createArtikel
         }
 
         //Make sure the upload directory exists.
-        $uploadDirectory = "posts" . DIRECTORY_SEPARATOR . date("Y-m-d");
+        $uploadDirectory = "posts" . "/" . date("Y-m-d");
         if (!file_exists($uploadDirectory)) {
             mkdir($uploadDirectory, 0777, true);
         }
 
-        $destinationFilePath = $uploadDirectory . DIRECTORY_SEPARATOR . microtime() . "." . strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
+        $destinationFilePath = $uploadDirectory . "/" . microtime() . "." . strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
 
         //Move the uploaded image to the destination directory.
         if (!move_uploaded_file($tempPath, $destinationFilePath)) {
@@ -101,7 +101,7 @@ class createArtikel
         $image = imagescale($image, 128);
 
         $pathInfo = pathinfo($imagePath);
-        $thumbnailPath = $pathInfo["dirname"] . DIRECTORY_SEPARATOR . $pathInfo["filename"] . " (Thumbnail)." . $pathInfo["extension"];
+        $thumbnailPath = $pathInfo["dirname"] . "/" . $pathInfo["filename"] . " (Thumbnail)." . $pathInfo["extension"];
 
         if ($imageType == IMAGETYPE_PNG) {
             imagepng($image, $thumbnailPath);
@@ -111,8 +111,9 @@ class createArtikel
         echo $title, "<br>", $text, "<br>", $destinationFilePath, "<br>", $thumbnailPath, "<br>", $license;
 
 
-        //ALL BUT THIS WORKS GRRRRRRR :(
-        $result = $conn->query("INSERT INTO 'artikel'(title, content, picture, thumbnail, copyright) VALUES($title, $text, $destinationFilePath, $thumbnailPath, $license)");
+
+
+        $result = $conn->query("INSERT INTO artikel(title, content, picture, thumbnail, copyright) VALUES('$title', '$text', '$destinationFilePath', '$thumbnailPath', '$license')");
         if ($result) {
             echo "Bild erfolgreich hochgeladen";
         }

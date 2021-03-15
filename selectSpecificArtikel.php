@@ -23,8 +23,9 @@ $result = $conn->query($sql);
 
 if($result->num_rows>0){
     while ($row = $result->fetch_assoc()) {
+        echo "<div id='title'><h1>" . $row["title"] . "</h1></div>";
         echo "<div class='artikel'>";
-        echo "<H1>" . $row["title"]. "</H1><br>" . $row["content"];
+        echo $row["content"];
         echo "</div>";
     }
 }

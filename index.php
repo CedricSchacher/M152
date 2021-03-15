@@ -16,13 +16,16 @@
     }
 ?>
 <div id="logo">
-    <img src="F1nfos.webp" width="100" loading="lazy">
+    <picture>
+        <img src="F1nfos.webp" width="100" loading="lazy">
+    </picture>
 </div>
 <h1>Formel 1 News und Infos</h1>
-<div id="artikels">
+
     <?php require_once "selectAllArtikel.php"; ?>
-</div>
+<div id="bottom">
 <button><a href="hochladen.php">Neuer Artikel</a></button>
+</div>
 
 </body>
 </html>
