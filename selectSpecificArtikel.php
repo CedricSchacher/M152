@@ -25,7 +25,11 @@ if($result->num_rows>0){
     while ($row = $result->fetch_assoc()) {
         echo "<div id='title'><h1>" . $row["title"] . "</h1></div>";
         echo "<div class='artikel'>";
-        echo $row["content"];
+        echo "<figure>";
+        echo "<img src='" . $row["picture"] .  "' loading='lazy'>";
+        echo "<figcaption>Copyright: " . $row["copyright"] . "</figcaption> </figure>";
+        echo "<div id='content'>" . $row["content"] . "</div>";
+
         echo "</div>";
     }
 }

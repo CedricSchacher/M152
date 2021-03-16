@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="commentStyle.css">
     <title>F1nfo</title>
 </head>
 <body>
@@ -18,9 +19,18 @@
     <?php require_once "selectSpecificComments.php"; ?>
 </div>
 <div id="neuKommentar">
-    <input type="text" id="name">
-    <input type="text" id="kommentar">
+    <h3>Neuer Kommentar</h3>
+    <form enctype="multipart/form-data" method="POST">
+    <input type="text" name="name" placeholder="Name" id="textName">
+    <input type="text" name="kommentar" placeholder="Comment" id="textComment">
+    <input type="submit" name="submitbutton" id="submitButton">
+    </form>
 </div>
-
+<?php
+require_once "createComment.php";
+if (isset($_POST["submitbutton"])) {
+    $creationResult = createComment::getInstance()->commentErstellen();
+}
+?>
 </body>
 </html>

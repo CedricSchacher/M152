@@ -1,14 +1,20 @@
 
-#title{
-
+#content{
+    float: left;
 }
+
 .artikel{
     border: 2px solid black;
     margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: auto 75% auto;
 }
-.nameDate{
-    float: right;
+.artikel img{
+    grid-row: 1;
+    grid-column: 1;
+
 }
+
 
 #logo{
     margin-top: 0;
@@ -26,7 +32,8 @@ h2{
 }
 h3{
     font-size: 20px;
-    color: #901111
+    color: #901111;
+    text-align: center;
 }
 h4{
     font-size: 18px;

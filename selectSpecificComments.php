@@ -23,10 +23,11 @@ $result = $conn->query($sql);
 
 if($result->num_rows>0){
     while ($row = $result->fetch_assoc()) {
-        echo "<div class='artikel'>";
-        echo " " . $row["content"]. "<br><div class='nameDate'>" . $row["datum"] ." " .  $row["name"] .  "</div>";
+        echo "<div class='comment'>";
+        echo "<div class='kommentar'>" . $row["content"]. "</div><div class='nameDate'>" . $row["datum"] ."</br>" .  $row["name"] .  "</div>";
         echo "</div>";
     }
+
 }
 else{
     echo "0 Results";

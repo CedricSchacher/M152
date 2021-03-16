@@ -22,9 +22,7 @@ class createArtikel
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        else{
-            echo "connection erfolgreich";
-        }
+
 
         if (!isset($_POST["title"]) || empty($_POST["title"])) {
             echo "You must specify a title.";
