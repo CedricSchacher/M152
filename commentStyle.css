@@ -1,0 +1,47 @@
+.comment{
+    display: grid;
+    grid-template-columns: 90% auto;
+    grid-template-rows: 100% auto;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+.kommentar{
+    grid-column: 1;
+    grid-row: 1 / 2;
+}
+.nameDate{
+    float: right;
+    grid-row: 1;
+    grid-column: 2;
+}
+#neuKommentar{
+    border: 2px solid black;
+    margin-bottom: 5px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+
+
+}
+form{
+    display: grid;
+    grid-template-rows: auto 5px auto 5px auto;
+    grid-template-columns: 30% auto 10%;
+    margin: 5px;
+}
+#textComment{
+    grid-row: 3;
+    grid-column: 1 / 4;
+    text-align: center;
+    height: 150px;
+}
+#textName{
+    grid-row: 1;
+    grid-column: 3;
+    text-align: center;
+}
+#submitButton{
+    grid-row: 5;
+    grid-column: 3;
+}

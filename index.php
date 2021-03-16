@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="changePage.js"></script>
     <title>F1nfo</title>
 </head>
 <body>
@@ -16,13 +17,16 @@
     }
 ?>
 <div id="logo">
-
+    <picture>
+        <img src="F1nfos.webp" width="100" loading="lazy">
+    </picture>
 </div>
 <h1>Formel 1 News und Infos</h1>
-<div id="artikel">
 
+    <?php require_once "selectAllArtikel.php"; ?>
+<div id="bottom">
+<button><a href="hochladen.php">Neuer Artikel</a></button>
 </div>
-<button>Neuer Artikel</button>
 
 </body>
 </html>
